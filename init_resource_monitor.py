@@ -48,7 +48,7 @@ scrape_configs:
  
   - job_name: cadvisor
     static_configs:
-      - targets: ['%(ip)s.168.91.132:8080']
+      - targets: ['%(ip)s:8080']
         labels:
           instance: cadvisor
 """ % dict(ip=sys.argv[1])
