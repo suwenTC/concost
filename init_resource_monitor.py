@@ -46,11 +46,11 @@ scrape_configs:
         labels:
           instance: prometheus
  
-  - job_name: linux
+  - job_name: cadvisor
     static_configs:
-      - targets: ['%(ip)s.168.91.132:9100']
+      - targets: ['%(ip)s.168.91.132:8080']
         labels:
-          instance: localhost
+          instance: cadvisor
 """ % dict(ip=sys.argv[1])
 
 writePrometheusConfigFile("prometheus.yml", prometheus)
