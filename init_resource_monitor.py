@@ -58,7 +58,7 @@ writePrometheusConfigFile("prometheus.yml", prometheus)
 
 os.system('docker run -d -p 9090:9090 \
   -v "/opt/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml" \
-  -name="prometheus" \
+  --name="prometheus" \
   prom/prometheus')
 
 os.system("mkdir /opt/grafana-storage")
