@@ -36,8 +36,8 @@ os.system("touch /opt/prometheus/prometheus.yml")
 
 prometheus = """
 global:
-  scrape_interval:     60s
-  evaluation_interval: 60s
+  scrape_interval:     10s
+  evaluation_interval: 10s
  
 scrape_configs:
   - job_name: prometheus
