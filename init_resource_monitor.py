@@ -16,6 +16,7 @@ os.system('docker run -d -p 9100:9100 \
   -v "/sys:/host/sys:ro" \
   -v "/:/rootfs:ro" \
   --net="host" \
+  --name="node-exporter" \
   prom/node-exporter')
 
 os.system('docker run \
@@ -57,6 +58,7 @@ writePrometheusConfigFile("prometheus.yml", prometheus)
 
 os.system('docker run -d -p 9090:9090 \
   -v "/opt/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml" \
+  -name="prometheus" \
   prom/prometheus')
 
 os.system("mkdir /opt/grafana-storage")
