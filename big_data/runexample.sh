@@ -7,4 +7,18 @@ cat /etc/hostsbak > /etc/hosts
 rm -rf /etc/hostsbak
 #run wordcount example
 #/usr/bin/restart_hadoop_spark.sh
+
+service ssh restart
+
+# restart hdfs                                                       
+${HADOOP_HOME}/sbin/start-dfs.sh
+
+# restart yarn                                                               
+${HADOOP_HOME}/sbin/start-yarn.sh
+
+# restart spark                                                               
+${SPARK_HOME}/sbin/start-all.sh
+
+${HADOOP_HOME}/bin/hdfs dfs -ls /HiBench/Wordcount/Input/
+
 ${HIBENCH_HOME}/bin/workloads/micro/wordcount/hadoop/run.sh
