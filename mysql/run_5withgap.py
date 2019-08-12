@@ -27,4 +27,8 @@ time.sleep(100)
 t5 = threading.Thread(target=doit, args=(4,))
 t5.start()
 end = time.time()
-print(end-start)
+cost = end - start
+
+f=open("/users/SuwenTC/concost/mysql/100sgap_cost.txt", "w")
+f.write(str(cost))
+f.close()
