@@ -21,4 +21,7 @@ ${SPARK_HOME}/sbin/start-all.sh
 
 ${HADOOP_HOME}/bin/hdfs dfs -ls /HiBench/Wordcount/Input/
 
+${HADOOP_HOME}/bin/hadoop dfsadmin -safemode leave
+
 ${HIBENCH_HOME}/bin/workloads/micro/wordcount/hadoop/run.sh
+#cat  /root/HiBench/report/wordcount/hadoop/conf/../bench.log
