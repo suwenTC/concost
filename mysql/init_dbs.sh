@@ -7,4 +7,4 @@ do
     i=$(( $i + 1 ))
 done
 
-docker run --name 5in1 -v $(pwd)/time_cost:/root/time_cost -e MYSQL_ROOT_PASSWORD=1234 -d suwenbrucegu/mysql:latest
+docker run --name xin1 -v $(pwd)/time_cost:/root/time_cost -e MYSQL_ROOT_PASSWORD=1234 -d suwenbrucegu/mysql:latest
