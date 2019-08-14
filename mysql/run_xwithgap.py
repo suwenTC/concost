@@ -21,7 +21,7 @@ cost = end - start
 start = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(start))
 end = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(end))
 time_info = str(start) + ", " + str(cost) + ", " + str(end)
-print(start, end ,timeinfo)
+
 f=open("/users/SuwenTC/concost/mysql/time_cost/5in5_100/100sgap_cost.txt", "w")
 f.write(time_info)
 f.close()

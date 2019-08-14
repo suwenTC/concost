@@ -12,6 +12,6 @@ docker exec "db$i" ./run_queries.sh "5in5_$i" > /dev/null 2>&1
 
 end=$(date +%s)
 end_date=date
-touch time_cost/oveall.txt
+touch time_cost/overall.txt
 time_cost=$(( end - start ))
-echo "$start_date, $time_cost, $end_date" > time_cost/oveall.txt
+echo "$start_date, $time_cost, $end_date" > time_cost/overall.txt
