@@ -37,6 +37,8 @@ if [ $? == 1 ]; then
     exit 1;
 fi
 
+start=$(date +%s)
+start_date=$(date)
 # run HiBench workload wordcount as an example
 # Format: sudo docker run (-v "LocalLargeDiskDir:/usr/loal"-it) hibench-hadoop-spark /bin/bash /root/HiBench/workloads/<workload-name>/prepare/prepare.sh
 if [ "$1" == "cdh" ]
@@ -44,5 +46,14 @@ then
    sudo docker run -ti hibench-docker-cdh /bin/bash -c '/root/runexample.sh'
 elif [ "$1" == "open-source" ]
 then
-   sudo docker --name 1in1 run -v /users/SuwenTC/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh 1in1'
+    sudo docker run --name 5in5_1 -v $(pwd)/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh 5in5_1' &
+    sudo docker run --name 5in5_2 -v $(pwd)/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh 5in5_2' &
+    sudo docker run --name 5in5_3 -v $(pwd)/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh 5in5_3' &
+    sudo docker run --name 5in5_4 -v $(pwd)/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh 5in5_4' &
+    sudo docker run --name 5in5_5 -v $(pwd)/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh 5in5_5'
 fi
+end=$(date +%s)
+end_date=$(date)
+time_cost=$(( end - start ))
+touch /users/SuwenTC/concost/big_date/time_cost/5in5_overall.txt
+echo "$start_date, $end_date, $time_cost" > /users/SuwenTC/concost/big_date/time_cost/5in5_overall.txt
