@@ -16,7 +16,7 @@
 
 
 
-#DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 echo "#=================================================#"
 echo "     This script first build the images            "
@@ -30,15 +30,13 @@ echo "#=================================================#"
 echo "                                                   "
 echo "                                                   "
 
-#${DIR}/build_docker.sh $1
+${DIR}/build_docker.sh $1
 if [ $? == 1 ]; then
     echo "Usage $0 {cdh|open-source}"
     echo " "
     exit 1;
 fi
 
-start=$(date +%s)
-start_date=$(date)
 # run HiBench workload wordcount as an example
 # Format: sudo docker run (-v "LocalLargeDiskDir:/usr/loal"-it) hibench-hadoop-spark /bin/bash /root/HiBench/workloads/<workload-name>/prepare/prepare.sh
 if [ "$1" == "cdh" ]
@@ -46,14 +44,5 @@ then
    sudo docker run -ti hibench-docker-cdh /bin/bash -c '/root/runexample.sh'
 elif [ "$1" == "open-source" ]
 then
-    sudo docker run --name 5in5_1 -v /users/SuwenTC/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh 5in5_1' &
-    sudo docker run --name 5in5_2 -v /users/SuwenTC/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh 5in5_2' &
-    sudo docker run --name 5in5_3 -v /users/SuwenTC/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh 5in5_3' &
-    sudo docker run --name 5in5_4 -v /users/SuwenTC/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh 5in5_4' &
-    sudo docker run --name 5in5_5 -v /users/SuwenTC/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh 5in5_5'
+   sudo docker run --name 5in1 -v /users/SuwenTC/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample5.sh 5in1'
 fi
-end=$(date +%s)
-end_date=$(date)
-time_cost=$(( end - start ))
-touch /users/SuwenTC/concost/big_data/time_cost/5in5_overall.txt
-echo "$start_date, $end_date, $time_cost" > /users/SuwenTC/concost/big_data/time_cost/5in5_overall.txt

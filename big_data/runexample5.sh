@@ -19,8 +19,6 @@ ${HADOOP_HOME}/sbin/start-yarn.sh
 # restart spark                                                               
 ${SPARK_HOME}/sbin/start-all.sh
 
-${HADOOP_HOME}/bin/hdfs dfs -ls /HiBench/Wordcount/Input/
-
 ${HADOOP_HOME}/bin/hadoop dfsadmin -safemode leave
 
 touch /root/time_cost/5in1.txt
@@ -34,5 +32,5 @@ ${HIBENCH_HOME}/bin/workloads/micro/wordcount/hadoop/run.sh
 end=$(date +%s)
 end_date=$(date)
 time_cost=$(( end - start ))
-echo "$start_date, $end_date, time_cost" >  /root/time_cost/5in1.txt
+echo "$start_date, $end_date, $time_cost" >  /root/time_cost/5in1.txt
 	       
