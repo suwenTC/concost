@@ -68,7 +68,9 @@ COPY scripts/restart_hadoop_spark.sh /usr/bin
 RUN chmod +x /usr/bin/restart_hadoop_spark.sh
 #Copy RunExample File
 COPY scripts/runexample.sh /root/runexample.sh
+COPY scripts/runexample5.sh /root/runexample5.sh
 COPY scripts/prepare.sh /root/prepare.sh
 RUN chmod +x /root/prepare.sh
 RUN chmod +x /root/runexample.sh
+RUN chmod +x /root/runexample5.sh
 RUN bash /root/prepare.sh
