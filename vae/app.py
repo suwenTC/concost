@@ -10,6 +10,7 @@ import time
 import os
 import sys
 import psutil
+start=time.time()
 pid = os.getpid()
 p = psutil.Process(pid)
 start_time = time.time()
@@ -167,3 +168,4 @@ if __name__ == "__main__":
         with torch.no_grad():
             sample = torch.randn(64, 20).to(device)
             sample = model.decode(sample).cpu()
+print(time.time()-start)

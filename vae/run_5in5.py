@@ -3,7 +3,7 @@ import sys
 import threading
 
 def doit(index):
-    os.system("docker run --name vae" +str(index)+' fuyuqi1995/june-vae "10 /root/torch/vae.logs vae-test-epoch"')
+    os.system("docker run --name vae" +str(index)+' vae ./run.sh')
     
 cc = int(sys.argv[1])
 

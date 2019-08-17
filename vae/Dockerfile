@@ -9,6 +9,8 @@ WORKDIR /vae
 RUN touch vae.logs
 COPY app.py /vae
 COPY run_5in1.py /vae
+COPY run.sh /vae
 COPY download_data.py /vae
 COPY run_100s_gap.py /vae
+RUN chmod +x run.sh
 RUN ["python", "download_data.py"]
