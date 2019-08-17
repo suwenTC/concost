@@ -3,7 +3,7 @@ import sys
 import threading
 
 def doit(index):
-    os.system("python app.py 10 /vae/vae.logs vae-test-epoch")
+    os.system("./run.sh")
     
 cc = int(sys.argv[1])
 
