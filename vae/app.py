@@ -10,10 +10,13 @@ import time
 import os
 import sys
 import psutil
+import datetime
+
 start=time.time()
 pid = os.getpid()
 p = psutil.Process(pid)
-start_time = time.time()
+start_time=datetime.datetime.now()
+#start_time=time.time()
 root = '/root/data'
 if not os.path.exists(root):
     os.mkdir(root)
@@ -168,4 +171,6 @@ if __name__ == "__main__":
         with torch.no_grad():
             sample = torch.randn(64, 20).to(device)
             sample = model.decode(sample).cpu()
+end=datetime.datetime.now()
+print(str(start_time), str(end), time.time()-start)
 print(time.time()-start)

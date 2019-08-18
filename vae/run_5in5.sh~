@@ -1,0 +1,7 @@
+#!/bin/bash
+
+docker run --name vae0 --cpu="3.2" vae ./run.sh &
+docker run --name vae1 --cpu="3.2" vae ./run.sh &
+docker run --name vae2 --cpu="3.2" vae ./run.sh &
+docker run --name vae3 --cpu="3.2" vae ./run.sh &
+docker run --name vae4 --cpu="3.2" vae ./run.sh
