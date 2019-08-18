@@ -4,7 +4,7 @@ USER root
 RUN apt-get update
 RUN apt-get install -y emacs
 RUN mkdir /keras-irnn
-RUN pip install torchvision
+#RUN pip install torchvision
 WORKDIR /keras-irnn
 RUN touch keras-irnn.logs
 COPY app.py /keras-irnn

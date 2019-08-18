@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: vae5in1
+spec:
+  restartPolicy: OnFailure
+  containers:
+  - name: vae0
+    image: vae
+    command: ["./run.sh"]
+    imagePullPolicy: IfNotPresent
+  - name: vae1
+    image: vae
+    command: ["./run.sh"]
+    imagePullPolicy: IfNotPresent
+  - name: vae2
+    image: vae
+    command: ["./run.sh"]
+    imagePullPolicy: IfNotPresent
+  - name: vae3
+    image: vae
+    command: ["./run.sh"]
+    imagePullPolicy: IfNotPresent
+  - name: vae4
+    image: vae
+    command: ["./run.sh"]
+    imagePullPolicy: IfNotPresent
+ 

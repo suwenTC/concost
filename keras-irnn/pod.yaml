@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ki0
+spec:
+  restartPolicy: OnFailure
+  containers:
+  - name: kerasirnn
+    image: ki0
+    command: ["./run.sh"]
+    imagePullPolicy: IfNotPresent
+ 
