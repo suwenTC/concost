@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: wordcount1
+  name: wordcount2
 spec:
   restartPolicy: OnFailure
   containers:
