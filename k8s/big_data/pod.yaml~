@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: wordcount
+spec:
+  restartPolicy: OnFailure
+  containers:
+  - name: wc0
+    image: hibench-docker-opensource
+    command: ["/bin/bash -c"]
+    args: ["/root/runexample.sh", "1in1"]
+    imagePullPolicy: IfNotPresent
+    volumeMounts:
+      - name: hostvol
+        mountPath: /root/time_cost
+  volumes:
+    - name: hostvol
+      hostPath:
+        path: /users/SuwenTC/concost/k8s/big_data/time_cost
+ 
