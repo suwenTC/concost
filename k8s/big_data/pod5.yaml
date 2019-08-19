@@ -8,7 +8,7 @@ spec:
   - name: wc
     image: hibench-docker-opensource
     command: ["/bin/sh"]
-    args: ["/root/runexample.sh", "1in1"]
+    args: ["/root/runexample.sh", "5in5_5"]
     imagePullPolicy: IfNotPresent
     volumeMounts:
       - name: hostvol
