@@ -73,4 +73,4 @@ COPY scripts/runexample.sh /root/runexample.sh
 #RUN chmod +x /root/prepare.sh
 RUN chmod +x /root/runexample.sh
 #RUN chmod +x /root/runexample5.sh
-RUN bash /root/prepare.sh
+#RUN bash /root/prepare.sh
