@@ -12,8 +12,8 @@ cp $(pwd)/concost/big_data/Dockerfile $(pwd)/HiBench/docker/opensource-docker/
 cp $(pwd)/concost/big_data/hibench.conf $(pwd)/HiBench/docker/base/conf
 #cp $(pwd)/concost/big_data/prepare.sh $(pwd)/HiBench/docker/opensource-docker/scripts
 cp $(pwd)/concost/big_data/run_container.sh $(pwd)/HiBench/docker/scripts
-#cp $(pwd)/concost/big_data/run_container5.sh $(pwd)/HiBench/docker/scripts
+cp $(pwd)/concost/big_data/run_container5.sh $(pwd)/HiBench/docker/scripts
 cp $(pwd)/concost/big_data/run_xwithgap.py $(pwd)/HiBench/docker/scripts
-#cp $(pwd)/concost/big_data/runexample.sh $(pwd)/HiBench/docker/opensource-docker/scripts
+cp $(pwd)/concost/big_data/runexample.sh $(pwd)/HiBench/docker/opensource-docker/scripts
 #cp $(pwd)/concost/big_data/runexample5.sh $(pwd)/HiBench/docker/opensource-docker/scripts
 sudo bash $(pwd)/HiBench/docker/scripts/build_docker.sh open-source
