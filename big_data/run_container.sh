@@ -44,5 +44,5 @@ then
    sudo docker run -ti hibench-docker-cdh /bin/bash -c '/root/runexample.sh'
 elif [ "$1" == "open-source" ]
 then
-   sudo docker run --name 1in1 -v /users/SuwenTC/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh 1in1'
+   sudo docker run --name 1in1 -v /home/sgu21/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh 1in1'
 fi

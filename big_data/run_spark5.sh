@@ -46,14 +46,14 @@ then
    sudo docker run -ti hibench-docker-cdh /bin/bash -c '/root/runexample.sh'
 elif [ "$1" == "open-source" ]
 then
-    sudo docker run --name spark_5in5_1 -v /users/SuwenTC/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh spark_5in5_1' &
-    sudo docker run --name spark_5in5_2 -v /users/SuwenTC/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh spark_5in5_2' &
-    sudo docker run --name spark_5in5_3 -v /users/SuwenTC/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh spark_5in5_3' &
-    sudo docker run --name spark_5in5_4 -v /users/SuwenTC/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh spark_5in5_4' &
-    sudo docker run --name spark_5in5_5 -v /users/SuwenTC/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh spark_5in5_5'
+    sudo docker run --name spark_5in5_1 -v /home/sgu21/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh spark_5in5_1' &
+    sudo docker run --name spark_5in5_2 -v /home/sgu21/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh spark_5in5_2' &
+    sudo docker run --name spark_5in5_3 -v /home/sgu21/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh spark_5in5_3' &
+    sudo docker run --name spark_5in5_4 -v /home/sgu21/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh spark_5in5_4' &
+    sudo docker run --name spark_5in5_5 -v /home/sgu21/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample.sh spark_5in5_5'
 fi
 end=$(date +%s)
 end_date=$(date)
 time_cost=$(( end - start ))
-touch /users/SuwenTC/concost/big_data/time_cost/spark_5in5_overall.txt
-echo "$start_date, $end_date, $time_cost" > /users/SuwenTC/concost/big_data/time_cost/spark_5in5_overall.txt
+touch /home/sgu21/concost/big_data/time_cost/spark_5in5_overall.txt
+echo "$start_date, $end_date, $time_cost" > /home/sgu21/concost/big_data/time_cost/spark_5in5_overall.txt
