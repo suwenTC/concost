@@ -41,7 +41,7 @@ RUN export HADOOP_OPTS="-Djava.library.path=$HADOOP_INSTALL/lib"
 
 RUN wget http://archive.apache.org/dist/hadoop/core/hadoop-${HADOOP_VERSION_DETAIL}/hadoop-${HADOOP_VERSION_DETAIL}.tar.gz
 RUN tar xzf hadoop-*.tar.gz -C /usr/local/
-RUN rm -f hadoop-*.tar.gz 
+RUN rm -f hadoop-*.tar.gz
 
 
 #==============================
@@ -56,7 +56,7 @@ ENV SPARK_MASTER_IP localhost
 RUN wget http://archive.apache.org/dist/spark/spark-${SPARK_VERSION_DETAIL}/spark-${SPARK_VERSION_DETAIL}-bin-hadoop${HADOOP_FOR_SPARK_VERSION}.tgz
 RUN tar xzf spark-*.tgz -C /usr/local
 RUN mv /usr/local/spark-* ${SPARK_HOME}
-RUN rm -f spark-*.tgz 
+RUN rm -f spark-*.tgz
 
 # Copy updated config files
 COPY conf/core-site.xml ${HADOOP_CONF_DIR}/
@@ -69,6 +69,7 @@ RUN chmod +x /usr/bin/restart_hadoop_spark.sh
 #Copy RunExample File
 COPY scripts/runexample.sh /root/runexample.sh
 COPY scripts/runexample_spark.sh /root/runexample_spark.sh
+copy conf/kmeans.conf /root/HiBench/conf/workloads/ml
 #COPY scripts/runexample5.sh /root/runexample5.sh
 #COPY scripts/prepare.sh /root/prepare.sh
 #RUN chmod +x /root/prepare.sh
