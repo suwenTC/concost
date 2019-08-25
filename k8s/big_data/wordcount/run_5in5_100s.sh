@@ -1,0 +1,15 @@
+#!/bin/bash
+
+kubectl apply -f pod1.yaml
+sleep 100
+
+kubectl apply -f pod2.yaml
+sleep 100
+
+kubectl apply -f pod3.yaml
+sleep 100
+
+kubectl apply -f pod4.yaml
+sleep 100
+
+kubectl apply -f pod5.yaml

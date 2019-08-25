@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: svm4
+spec:
+  restartPolicy: OnFailure
+  containers:
+  - name: svm
+    image: hibench-docker-opensource
+    command: ["/bin/sh"]
+    args: ["/root/runexample_spark.sh", "5in5_4"]
+    imagePullPolicy: IfNotPresent
+    volumeMounts:
+      - name: hostvol
+        mountPath: /root/time_cost
+  volumes:
+    - name: hostvol
+      hostPath:
+        path: /home/sgu21/concost/k8s/big_data/svm/time_cost
