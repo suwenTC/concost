@@ -12,6 +12,6 @@ start=$(date +%s)
 start_date=$(date)
 ${HIBENCH_HOME}/bin/workloads/ml/kmeans/prepare/prepare.sh
 ${HIBENCH_HOME}/bin/workloads/ml/kmeans/spark/run.sh
-end_date=$(date)
+end_date=$(date +%s)
 time_cost=$(( end - start ))
 echo "$start_date, $end_date, $time_cost" > "/root/time_cost/spark_$1.txt"
