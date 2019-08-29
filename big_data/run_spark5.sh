@@ -43,14 +43,14 @@ start_date=$(date)
 # Format: sudo docker run (-v "LocalLargeDiskDir:/usr/loal"-it) hibench-hadoop-spark /bin/bash /root/HiBench/workloads/<workload-name>/prepare/prepare.sh
 if [ "$1" == "cdh" ]
 then
-   sudo docker run -ti hibench-docker-cdh /bin/bash -c '/root/runexample_svm.sh'
+   sudo docker run -ti hibench-docker-cdh /bin/bash -c '/root/runexample_spark.sh'
 elif [ "$1" == "open-source" ]
 then
-    sudo docker run --name spark_5in5_1 -v /home/sgu21/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample_svm.sh spark_5in5_1' &
-    sudo docker run --name spark_5in5_2 -v /home/sgu21/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample_svm.sh spark_5in5_2' &
-    sudo docker run --name spark_5in5_3 -v /home/sgu21/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample_svm.sh spark_5in5_3' &
-    sudo docker run --name spark_5in5_4 -v /home/sgu21/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample_svm.sh spark_5in5_4' &
-    sudo docker run --name spark_5in5_5 -v /home/sgu21/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample_svm.sh spark_5in5_5'
+    sudo docker run --name spark_5in5_1 -v /home/sgu21/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample_spark.sh spark_5in5_1' &
+    sudo docker run --name spark_5in5_2 -v /home/sgu21/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample_spark.sh spark_5in5_2' &
+    sudo docker run --name spark_5in5_3 -v /home/sgu21/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample_spark.sh spark_5in5_3' &
+    sudo docker run --name spark_5in5_4 -v /home/sgu21/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample_spark.sh spark_5in5_4' &
+    sudo docker run --name spark_5in5_5 -v /home/sgu21/concost/big_data/time_cost:/root/time_cost hibench-docker-opensource /bin/bash -c '/root/runexample_spark.sh spark_5in5_5'
 fi
 end=$(date +%s)
 end_date=$(date)
