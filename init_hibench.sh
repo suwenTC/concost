@@ -11,7 +11,7 @@ git clone https://github.com/zsl3203/summer.git
 cp $(pwd)/concost/big_data/Dockerfile $(pwd)/HiBench/docker/opensource-docker/
 cp $(pwd)/concost/big_data/hibench.conf $(pwd)/HiBench/docker/base/conf
 cp $(pwd)/concost/big_data/base/Dockerfile $(pwd)/HiBench/docker/base/
-cp $(pwd)/concost/big_data/base/build_docker.sh $(pwd)/HiBench/docker/scripts
+cp $(pwd)/concost/big_data/build_docker.sh $(pwd)/HiBench/docker/scripts
 cp $(pwd)/concost/big_data/svm.conf $(pwd)/HiBench/docker/opensource-docker/conf
 cp $(pwd)/concost/big_data/kmeans.conf $(pwd)/HiBench/docker/opensource-docker/conf
 #cp $(pwd)/concost/big_data/prepare.sh $(pwd)/HiBench/docker/opensource-docker/scripts
