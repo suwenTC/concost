@@ -69,11 +69,14 @@ RUN chmod +x /usr/bin/restart_hadoop_spark.sh
 #Copy RunExample File
 COPY scripts/runexample.sh /root/runexample.sh
 COPY scripts/runexample_spark.sh /root/runexample_spark.sh
+COPY scripts/runexample_svm.sh /root/runexample_svm.sh
 COPY conf/svm.conf /root/HiBench/conf/workloads/ml
+COPY conf/kmeans.conf /root/HiBench/conf/workloads/ml
 #COPY scripts/runexample5.sh /root/runexample5.sh
 #COPY scripts/prepare.sh /root/prepare.sh
 #RUN chmod +x /root/prepare.sh
 RUN chmod +x /root/runexample.sh
 RUN chmod +x /root/runexample_spark.sh
+RUN chmod +x /root/runexample_svm.sh
 #RUN chmod +x /root/runexample5.sh
 #RUN bash /root/prepare.sh

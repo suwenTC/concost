@@ -16,4 +16,4 @@ spec:
   volumes:
     - name: hostvol
       hostPath:
-        path: /home/sgu21/concost/k8s/big_data/docker/time_cost
+        path: /home/sgu21/concost/k8s/big_data/wordcount/time_cost
