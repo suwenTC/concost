@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pagerank2
+spec:
+  restartPolicy: OnFailure
+  containers:
+  - name: pg
+    image: hibench-docker-opensource
+    command: ["/bin/sh"]
+    args: ["/root/runexample_pg.sh", "5in5_1"]
+    imagePullPolicy: IfNotPresent
+    volumeMounts:
+      - name: hostvol
+        mountPath: /root/time_cost
+  volumes:
+    - name: hostvol
+      hostPath:
+        path: /home/sgu21/concost/k8s/big_data/pagerank/time_cost
+ 

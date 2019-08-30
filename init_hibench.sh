@@ -19,6 +19,7 @@ cp $(pwd)/concost/big_data/run_container.sh $(pwd)/HiBench/docker/scripts
 cp $(pwd)/concost/big_data/run_container5.sh $(pwd)/HiBench/docker/scripts
 cp $(pwd)/concost/big_data/run_xwithgap.py $(pwd)/HiBench/docker/scripts
 cp $(pwd)/concost/big_data/runexample.sh $(pwd)/HiBench/docker/opensource-docker/scripts
+cp $(pwd)/concost/big_data/runexample_pg.sh $(pwd)/HiBench/docker/opensource-docker/scripts
 cp $(pwd)/concost/big_data/runexample_svm.sh $(pwd)/HiBench/docker/opensource-docker/scripts
 cp $(pwd)/concost/big_data/runexample_spark.sh $(pwd)/HiBench/docker/opensource-docker/scripts
 #cp $(pwd)/concost/big_data/runexample5.sh $(pwd)/HiBench/docker/opensource-docker/scripts
